@@ -4,6 +4,6 @@ defmodule Rotor do
   end
 
   def translate_right mapping, position do
-    Enum.find_index(mapping, fn(c) -> c - ?A == position end)
+    Enum.find_index mapping, fn(c) -> c - ?A == position end
   end
 end

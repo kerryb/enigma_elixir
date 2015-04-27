@@ -16,4 +16,9 @@ defmodule RotorTest do
     result = rotate 'BDAC'
     assert result == 'DACB'
   end
+
+  test "reflect maps positionally using the supplied letter mapping" do
+    result = reflect 'BADC', 1 # 1 -> B -> A -> 0
+    assert result == 0
+  end
 end

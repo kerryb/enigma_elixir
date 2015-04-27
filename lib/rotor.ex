@@ -6,4 +6,8 @@ defmodule Rotor do
   def translate_right mapping, position do
     Enum.find_index mapping, &(&1 - ?A == position)
   end
+
+  def rotate [head|tail] do
+    tail ++ [head]
+  end
 end

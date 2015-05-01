@@ -1,3 +1,3 @@
 defmodule Reflector do
-  defdelegate reflect(mapping, position), to: Rotor, as: :translate_left
+  def reflect(mapping, input), do: Rotor.translate_left(mapping, 'A', input)
 end

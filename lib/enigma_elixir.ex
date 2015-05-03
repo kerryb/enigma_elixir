@@ -1,2 +1,0 @@
-defmodule EnigmaElixir do
-end

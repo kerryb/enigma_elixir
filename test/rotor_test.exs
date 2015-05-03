@@ -35,4 +35,9 @@ defmodule RotorTest do
     result = translate_right 2, context[:mapping], ?A # 2 -> A -> C -> 3
     assert result == 3
   end
+
+  test "translate_right maps positionally backwards using the supplied letter mapping when rotated", context do
+    result = translate_right 0, context[:mapping], ?C # 0 -> C -> D -> 1
+    assert result == 1
+  end
 end

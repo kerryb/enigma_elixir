@@ -11,6 +11,4 @@ defmodule Rotor do
   defp rotated_output(output, position, size), do: output + (position - ?A) |> rem(size)
 
   def translate_right(input, mapping, position), do: Enum.find_index(mapping, &(&1 - ?A == input))
-
-  def rotate([head|tail]), do: tail ++ [head]
 end

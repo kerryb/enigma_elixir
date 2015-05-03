@@ -35,9 +35,4 @@ defmodule RotorTest do
     result = translate_right 2, context[:mapping], ?A # 2 -> A -> C -> 3
     assert result == 3
   end
-
-  test "rotate returns a mapping rotated one place forwards", context do
-    result = rotate context[:mapping]
-    assert result == 'DACB'
-  end
 end

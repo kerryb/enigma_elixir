@@ -1,3 +1,3 @@
 defmodule Reflector do
-  def reflect(mapping, input), do: Rotor.translate_left(mapping, ?A, input)
+  def reflect(input, mapping), do: Rotor.translate_left(input, mapping, ?A)
 end

@@ -3,7 +3,7 @@ defmodule ReflectorTest do
   import Reflector
 
   test "reflect maps positionally using the supplied letter mapping" do
-    result = reflect 'BADC', 1 # 1 -> B -> A -> 0
+    result = reflect 1, 'BADC' # 1 -> B -> A -> 0
     assert result == 0
   end
 end

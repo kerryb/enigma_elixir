@@ -17,7 +17,7 @@ defmodule RotorTest do
   #   1 <- B <- 1
   #   0 <- A <- 0
   test "translate_left maps positionally using the supplied letter mapping when in the home position", context do
-    result = translate_left context[:mapping], ?A, 1 # 1 -> B -> D -> 3
+    result = translate_left 1, context[:mapping], ?A # 1 -> B -> D -> 3
     assert result == 3
   end
 
@@ -27,12 +27,12 @@ defmodule RotorTest do
   #   1 <- D <- 1
   #   0 <- C <- 0
   test "translate_left maps positionally using the supplied letter mapping when rotated", context do
-    result = translate_left context[:mapping], ?C, 2 # 2 -> A -> B -> 3
+    result = translate_left 2, context[:mapping], ?C # 2 -> A -> B -> 3
     assert result == 3
   end
 
   test "translate_right maps positionally backwards using the supplied letter mapping when in the home position", context do
-    result = translate_right context[:mapping], ?A, 2 # 2 -> A -> C -> 3
+    result = translate_right 2, context[:mapping], ?A # 2 -> A -> C -> 3
     assert result == 3
   end
 

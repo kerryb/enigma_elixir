@@ -1,5 +1,5 @@
 defmodule Rotor do
-  def translate_left(mapping, position, input) do
+  def translate_left input, mapping, position do
     size = Enum.count mapping
     input
     |> rotated_input(position, size)
@@ -10,7 +10,7 @@ defmodule Rotor do
   defp rotated_input(input, position, size), do: input + size - (position - ?A) |> rem(size)
   defp rotated_output(output, position, size), do: output + (position - ?A) |> rem(size)
 
-  def translate_right(mapping, position, input), do: Enum.find_index(mapping, &(&1 - ?A == input))
+  def translate_right(input, mapping, position), do: Enum.find_index(mapping, &(&1 - ?A == input))
 
   def rotate([head|tail]), do: tail ++ [head]
 end
